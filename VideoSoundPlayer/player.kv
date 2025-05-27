@@ -1,0 +1,37 @@
+<PlayerScreen>:
+    orientation: 'vertical'
+    spacing: dp(10)
+    padding: dp(10)
+
+    BoxLayout:
+        id: video_box
+        size_hint_y: 0.6
+        canvas.before:
+            Color:
+                rgba: 0.1, 0.1, 0.1, 1
+            RoundedRectangle:
+                pos: self.pos
+                size: self.size
+                radius: [20]
+
+    BoxLayout:
+        size_hint_y: 0.2
+        spacing: dp(10)
+        padding: dp(10)
+        Button:
+            text: "▶ Play Video"
+            on_release: root.play_video()
+        Button:
+            text: "■ Stop Video"
+            on_release: root.stop_video()
+
+    BoxLayout:
+        size_hint_y: 0.2
+        spacing: dp(10)
+        padding: dp(10)
+        Button:
+            text: "🎵 Play Audio"
+            on_release: root.play_audio()
+        Button:
+            text: "■ Stop Audio"
+            on_release: root.stop_audio()
